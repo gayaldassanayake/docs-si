@@ -141,6 +141,81 @@
     color: var(--md-primary-heder-fg-color);
 }
 
+/* Add these styles to your existing CSS file */
+
+.md-header__option {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.md-header__option .md-select {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.md-header__option .md-header__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0.25rem;
+    border: none;
+    background: transparent;
+    color: inherit;
+}
+
+/* Ensure the dropdown inner container doesn't interfere with layout */
+.md-header__option .md-select__inner {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.md-header__option .md-select__list {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.md-header__option .md-select__item {
+    margin: 0;
+}
+
+.md-header__option .md-select__link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--md-default-fg-color);
+    text-decoration: none;
+    font-size: 0.7rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-header__option .md-select__link:hover {
+    background: var(--md-default-fg-color--lightest);
+}
+
+.md-header__button-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 0.25rem;
+}
+
+.md-header__option .md-select__inner {
+    display: none;
+}
+
+.md-header__option .md-select:hover .md-select__inner {
+    display: block;
+}
+
 header>.md-grid,
 .md-tabs>.md-grid,
 .md-main>.md-grid,
